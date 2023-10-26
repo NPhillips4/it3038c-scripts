@@ -48,7 +48,7 @@ while($optionSelect -ne 6)
         Write-Host "The task has been created. uc.edu will now automatically open at login `n------------------------------------------------"
     }
     
-    Write-Host "What would you like to do? `n1) Create a new user `n2) Add a user to a group `n3) Delete a user `n4) Install basic msi files on this computer `n5) Open uc.edu on login `n6) Exit the program"
+    Write-Host "What would you like to do? `n1) Create a new user `n2) Add a user to a group `n3) Delete a user `n4) Install basic programs on this computer `n5) Open uc.edu on login `n6) Exit the program"
     $optionSelect = Read-Host "Enter a number (1-6)"
 }
 
