@@ -13,7 +13,7 @@ First, the module is added to the script
 ```powershell
 Import-Module 'Carbon'
 ```
-When running the script, the user is prompted to select one of the six functions of the script: Create user, add member to group, delete user, Install basic programs, open uc.edu at login, and exit program.
+When running the script, the user is prompted to select one of the six functions of the script: Create user, add member to group, delete user, install basic programs, open uc.edu at login, and exit program.
 ```powershell
 Write-Host "What would you like to do? `n1) Create a new user `n2) Add a user to a group `n3) Delete a user `n4) Install basic programs on this computer `n5) Open uc.edu on login `n6) Exit the program"
 $optionSelect = Read-Host "Enter a number (1-6)"
