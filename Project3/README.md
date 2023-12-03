@@ -1,4 +1,4 @@
-# Project 2
+# Project 3
 
 These are instructions/documentation on my script using the Powershell module Carbon.
 Start by installing Carbon from the Powershell Gallery. This requires Nuget, which will be prompted to install if it isn't already.
@@ -75,6 +75,7 @@ Entering "6" will end the while loop and exit the script.
 Sources:
 I used Carbon's documentation to help with options 1-3 https://get-carbon.org/documentation.html
 I also used Microsoft's resource to learn the syntax and parameters for task scheduling https://learn.microsoft.com/en-us/powershell/module/scheduledtasks/new-scheduledtask?view=windowsserver2022-ps
+Learned about the Add-Computer command here https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/add-computer?view=powershell-5.1
 
 
 
