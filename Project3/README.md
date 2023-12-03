@@ -1,6 +1,6 @@
 # Project 3
 
-These are instructions/documentation on my script using the Powershell module Carbon.
+These are instructions/documentation on my script using the Powershell module Carbon. This script is intended to aid in the process of setting up new computers by adding many potentially useful functions all in one place.<br>
 Start by installing Carbon from the Powershell Gallery. This requires Nuget, which will be prompted to install if it isn't already.
 ```powershell
  Install-Module -Name 'Carbon' -AllowClobber
