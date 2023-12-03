@@ -9,6 +9,7 @@ To run the script, run PowerShell as administrator and execute the file
 ```powershell
 Path\to\file\Project2.ps1
 ```
+If you want to use PowerShell ISE, run it as administrator and open the file within the program.<br> 
 First, the module is added to the script 
 ```powershell
 Import-Module 'Carbon'
