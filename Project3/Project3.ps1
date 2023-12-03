@@ -2,7 +2,7 @@
 
 #numbered list of functions for the script. Users can select a function with the cooresponding number
 Write-Host "What would you like to do? `n1) Create a new user `n2) Add a user to a group `n3) Delete a user `n4) Install basic programs on this computer `n5) Join a Domain and restart the machine `n6) Open uc.edu on login `n7) Set File Explorer to view hidden items and file name extensions `n8) Add a network printer `n9) Exit the program"
-$optionSelect = Read-Host "Enter a number (1-8)"
+$optionSelect = Read-Host "Enter a number (1-9)"
 
 while($optionSelect -ne 9)
 {
@@ -118,7 +118,7 @@ while($optionSelect -ne 9)
     }
     
     Write-Host "What would you like to do? `n1) Create a new user `n2) Add a user to a group `n3) Delete a user `n4) Install basic programs on this computer `n5) Join a Domain and restart the machine `n6) Open uc.edu on login `n7) Set File Explorer to view hidden items and file name extensions `n8) Add a network printer `n9) Exit the program"
-    $optionSelect = Read-Host "Enter a number (1-8)"
+    $optionSelect = Read-Host "Enter a number (1-9)"
 }
 
 Write-Host "Exiting the program"
