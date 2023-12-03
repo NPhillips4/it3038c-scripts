@@ -28,30 +28,30 @@ $cred = New-CCredential -User $userName -Password $pass
 Install-CUser -Credential $cred -Description $desc
 Write-Host "User $userName has been created `n------------------------------------------------"  
 ```
-Entering "2" will allow for adding a member to a local group. Answering the prompts for the desired user and existing group name will add the member.
+Option "2" will allow for adding a member to a local group. Answering the prompts for the desired user and existing group name will add the member.
 ```powershell
 $userName = Read-Host "Enter the username you would like to add to a group"
 $groupName = Read-Host "Enter the Group you would like to add the member to"
 Add-CGroupMember -Name $groupName -Member $userName
 Write-Host "User $userName has been added to $groupName `n------------------------------------------------"
 ```
-Entering "3" will allow a user to be deleted from the system. After prompting for a username, the user will then be removed as a local user.
+Option "3" will allow a user to be deleted from the system. After prompting for a username, the user will then be removed as a local user.
 ```powershell
 $userName = Read-Host "Enter Username to delete from the system"
 Uninstall-CUser -Username $userName
 Write-Host "User $userName has been deleted `n------------------------------------------------"
 ```
-Entering "4" will run an .exe file to install basic programs on your computer. The script is set up for my personal network, where I have a bundled .exe file that installs Firefox, 7zip, Java Runtime, and Microsoft.NET 4.8. This file is on a network share so I can run it from any machine on my network. If you are using this script for yourself, the path needs to be changed to your desired file(s).
+Option "4" will run an .exe file to install basic programs on your computer. The script is set up for my personal network, where I have a bundled .exe file that installs Firefox, 7zip, Java Runtime, and Microsoft.NET 4.8. This file is on a network share so I can run it from any machine on my network. If you are using this script for yourself, the path needs to be changed to your desired file(s).
 ```powershell
 \\DESKTOP-PKHN0QU\InstallationSoftware\ninite.exe
 Write-Host "------------------------------------------------"
 ```
-Entering "5" will prompt the user for a domain to add their local computer to. When the correct credentials are entered, the machine is then restarted to apply the changes. This option is difficult to test without access to a domain.
+Option "5" will prompt the user for a domain to add their local computer to. When the correct credentials are entered, the machine is then restarted to apply the changes. This option is difficult to test without access to a domain.
 ```powershell
 $domainName = Read-Host "Enter the name of the Domain you would like to join"
 Add-Computer -DomainName $domainName -restart
 ```
-Entering "6" will schedule a task to open Firefox and navigate to uc.edu when a user logs in to the system. Strings are used to define the different parameters of the task: New-ScheduledTaskAction, New-ScheduledTaskTrigger, etc. These strings are then used to create and register the task with the name "UCedu"
+Option "6" will schedule a task to open Firefox and navigate to uc.edu when a user logs in to the system. Strings are used to define the different parameters of the task: New-ScheduledTaskAction, New-ScheduledTaskTrigger, etc. These strings are then used to create and register the task with the name "UCedu"
 ```powershell
 $action = New-ScheduledTaskAction -Execute "C:\Program Files\Mozilla Firefox\firefox.exe" -Argument "https://www.uc.edu/"
 $trigger = New-ScheduledTaskTrigger -AtLogOn
@@ -68,7 +68,13 @@ Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer
 Stop-Process -Name explorer -Force
 Write-Host "Your Settings Have Been Changed `n------------------------------------------------"
 ```
-Entering "9" will end the while loop and exit the script.
+Option "8" will add a network printer from the prompted location
+```powershell
+$printerLocation = Read-Host "What is your printer's location? (ex: \\Server\Printer)"
+Add-Printer -ConnectionName $printerLocation
+Write-Host "------------------------------------------------`nYour printer has been added. `n------------------------------------------------"
+```
+Option "9" will end the while loop and exit the script.
 ### How is this script useful?
 This script is intended to aid in the process of setting up new computers by adding many potentially useful functions all in one place. It could be used in the home to speed up a new machine's setup, or for companies setting up computers for employees. This script can be easily customized to fit the needs of a person or company. Functions can be added and removed at will.
 
