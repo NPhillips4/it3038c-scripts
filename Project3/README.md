@@ -81,7 +81,7 @@ This script is intended to aid in the process of setting up new computers by add
 ### Sources:<br>
 I used Carbon's documentation to help with options 1-3 https://get-carbon.org/documentation.html<br>
 I also used Microsoft's resource to learn the syntax and parameters for task scheduling https://learn.microsoft.com/en-us/powershell/module/scheduledtasks/new-scheduledtask?view=windowsserver2022-ps<br>
-Learned about the Add-Computer command here https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/add-computer?view=powershell-5.1
+I Learned about the Add-Computer command here https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/add-computer?view=powershell-5.1
 
 
 
