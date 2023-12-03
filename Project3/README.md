@@ -1,6 +1,6 @@
 # Project 3
 
-These are instructions/documentation on my script using the Powershell module Carbon. This script is intended to aid in the process of setting up new computers by adding many potentially useful functions all in one place.<br>
+These are instructions/documentation on my script using the Powershell module Carbon. <br>
 Start by installing Carbon from the Powershell Gallery. This requires Nuget, which will be prompted to install if it isn't already.
 ```powershell
  Install-Module -Name 'Carbon' -AllowClobber
@@ -14,7 +14,7 @@ First, the module is added to the script
 ```powershell
 Import-Module 'Carbon'
 ```
-When running the script, the user is prompted to select one of the six functions of the script: Create user, add member to group, delete user, install basic programs, open uc.edu at login, and exit program. This script has error handling, if your prompt is invalid it should tell you why, then return to the main menu.
+When running the script, the user is prompted to select one of the eight functions of the script: Create user, add member to group, delete user, install basic programs, join a domain, open uc.edu at login, set File Explorer to view hidden files and file name extensions, and exit program. This script has error handling, if your prompt is invalid it should tell you why, then return to the main menu.
 ```powershell
 Write-Host "What would you like to do? `n1) Create a new user `n2) Add a user to a group `n3) Delete a user `n4) Install basic programs on this computer `n5) Open uc.edu on login `n6) Exit the program"
 $optionSelect = Read-Host "Enter a number (1-6)"
@@ -125,9 +125,10 @@ elseif ($optionSelect -eq 7)
         }
     }
 ```
-Entering "8" will end the while loop and exit the script.
+Entering "8" will end the while loop and exit the script.<br>
+This script is intended to aid in the process of setting up new computers by adding many potentially useful functions all in one place. It could be used in the home to speed up a new machine's setup, or for companies setting up computers for employees.<br>
 
-Sources:<br>
+### Sources:<br>
 I used Carbon's documentation to help with options 1-3 https://get-carbon.org/documentation.html<br>
 I also used Microsoft's resource to learn the syntax and parameters for task scheduling https://learn.microsoft.com/en-us/powershell/module/scheduledtasks/new-scheduledtask?view=windowsserver2022-ps<br>
 Learned about the Add-Computer command here https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/add-computer?view=powershell-5.1
