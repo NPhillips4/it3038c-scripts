@@ -1,4 +1,4 @@
-# Project 3
+# Final Project
 
 These are instructions/documentation on my script using the Powershell module Carbon. <br>
 Start by installing Carbon from the Powershell Gallery. This requires Nuget, which will be prompted to install if it isn't already.
