@@ -93,7 +93,7 @@ while($optionSelect -ne 9)
     elseif ($optionSelect -eq 7)
     {
         try {
-            #Changes registry keys for hidden files and file extensions, then restarts File Explorer
+        #Changes registry keys for hidden files and file extensions, then restarts File Explorer
             Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' -Name 'Hidden' -Value 1
             Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' -Name 'HideFileExt' -Value 0
             Stop-Process -Name explorer -Force
@@ -107,7 +107,7 @@ while($optionSelect -ne 9)
     elseif ($optionSelect -eq 8)
     {
         try {
-            #input a printer location to add a network printer
+        #input a printer location to add a network printer
             $printerLocation = Read-Host "What is your printer's location? (ex: \\Server\Printer)"
             Add-Printer -ConnectionName $printerLocation
             Write-Host "Your printer has been added. `n------------------------------------------------"
